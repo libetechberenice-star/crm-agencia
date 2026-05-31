@@ -35,8 +35,8 @@ export default async function ClienteDetallePage({ params }: { params: { id: str
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <span className={`text-sm px-3 py-1.5 rounded-full border font-medium ${ESTATUS_CLASES[client.estatus]}`}>
-            {ESTATUS_LABELS[client.estatus]}
+          <span className={`text-sm px-3 py-1.5 rounded-full border font-medium 
+                 ${(ESTATUS_CLASES as any)[client.estatus]}`}>
           </span>
           <Link
             href={`/clientes/${params.id}/editar`}
